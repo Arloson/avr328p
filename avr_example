@@ -1,0 +1,3 @@
+sudo avrdude -v -c arduino -p m328p  -P /dev/ttyUSB0 -U flash:w:main.hex:i
+avr-gcc -mmcu=atmega328p -c -o test.o main.c
+avr-gcc -g -mmcu=atmega328p -o test.elf test.o
